@@ -12,12 +12,23 @@
 
 | Parámetro | Valor Registrado | Verificación |
 | :--- | :--- | :--- |
-| **Repositorio Original** | `https://github.com/weave-logic-ai/weftos.git` | Verificado vía `git remote -v` |
+| **Repositorio Original WeftOS** | `https://github.com/weave-logic-ai/weftos.git` | Verificado vía `git remote -v` |
 | **Rama Activa** | `master` | Verificado vía `git branch --show-current` |
 | **Commit Exacto HEAD** | `fafd6168f8f97280ee24e5c2d2813b6e34918e15` | Inmutable (`git rev-parse HEAD`) |
-| **Licencia** | **MIT License** (Copyright 2025 The clawft contributors) | `LICENSE-MIT` presente y validado |
+| **Licencia WeftOS** | **MIT License** (Copyright 2025 The clawft contributors) | `LICENSE-MIT` presente y validado |
 | **Total Archivos / Crates** | 6,636 archivos rastreados en 85 workspace crates | Workspace Cargo monolítico |
-| **Repositorio Auxiliar (Odrzywołek)** | `https://github.com/VA00/SymbolicRegressionPackage.git` | Clonado en `C:\ARKAIOS\odrzywolek-eml` |
+| **Repositorio Auxiliar (Odrzywołek)** | `https://github.com/VA00/SymbolicRegressionPackage.git` | Commit `4e526a6d66e746d0a790b84f23e858db14227ee0` |
+| **Repositorio Publicado ARKAIOS** | `https://github.com/djklmr2025/arkaios-eml-lab.git` | Rama `main` (commit `c02c9f4`) |
+
+### Registro de Materiales Descargados e Integridad Criptográfica (SHA-256)
+Ubicación aislada: `C:\ARKAIOS\eml-lab\sources\`
+
+| Material | URL de Origen | Versión / Estado | Hash SHA-256 Verificado |
+| :--- | :--- | :--- | :--- |
+| **Artículo PDF** | `https://arxiv.org/pdf/2603.21852` | v2 (Marzo 2026) | `3E0393A77EC2378797F62FA3C9242A7724CA4319A2B9B7B6DB2CDB502516B7DF` |
+| **Artículo HTML** | `https://arxiv.org/html/2603.21852v2` | v2 (Marzo 2026) | `D129AC19D0066D5B65A7F3B30A885C3A4A2DF2E4FB61FEA745A35B6CB243184A` |
+| **Zenodo Archive** | `https://zenodo.org/records/19183008` | v1.0 (PNAS Snapshot) | `2DC58EF1DB5FD85673E3E0C6CB1AA3D1E16624DED1E2BACB2DB53CFB23C1EA37` |
+| **Código Fuente** | `https://github.com/VA00/SymbolicRegressionPackage` | Commit `4e526a6` | Clon verificado y auditado en `odrzywolek-eml/` |
 
 ---
 
