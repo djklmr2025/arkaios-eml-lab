@@ -1,0 +1,28 @@
+--- Antigravity: 'L(x) = eml(0, eml(x,1)) = ln(x)' ---
+  L_claim(2) = -1.0   ln(2) = 0.6931471806   (it equals 1-x = -1)
+  L_claim(5) = -4.0   ln(5) = 1.609437912   (it equals 1-x = -4)
+--- Antigravity: 'Neg(z) = eml(0, eml(0, eml(z,1))) = -z' ---
+  Neg_claim(0.5) = 1.693147181   -x = -0.5   (it equals 1 - ln(1-x), defined only for x<1)
+  Neg_claim(2) = DOMAIN FAIL (ln argument <= 0: -1.0)   -x = -2
+--- Antigravity: 'V(x,y)=exp(eml(ln(ln x), y)) , K=17, domain x>1, y>0' ---
+  K = 17
+  max |err| over x in {1.5,2,10,100}, y in {0.1,1,3,7.5}:  9.96e-60
+  outside domain: V(1,2) -> DOMAIN FAIL (ln argument <= 0: 0.0)
+  outside domain: V(0.5,2) -> DOMAIN FAIL (ln argument <= 0: -0.69314718)
+  outside domain: V(-3,2) -> DOMAIN FAIL (ln argument <= 0: -3.0)
+  outside domain: V(2,-1) -> DOMAIN FAIL (ln argument <= 0: -1.0)
+  outside domain: V(0,1) -> DOMAIN FAIL (ln argument <= 0: 0.0)
+--- 'Sub K=11' : D(x,y)=eml(ln x, exp y) with the paper's ln ---
+  K = 11
+  D(3,1) = 2.0   x-y = 2
+  D(5,-2) = 7.0   x-y = 7
+  D(0.5,4) = -3.5   x-y = -3.5
+  D(0,1) = DOMAIN FAIL (ln argument <= 0: 0.0)   x-y = -1
+  D(-2,1) = DOMAIN FAIL (ln argument <= 0: -2.0)   x-y = -3
+--- Copilot open question: constants -1 and 2 with only E and 1 (found by search; verified here) ---
+  -1: RPN 11111EEE1EE11E1EE  K=17  value=-1.0
+  2: RPN 111111EEE1EE11EE1EE  K=19  value=2.0
+  0 (Z): RPN 111E1EE  K=7  value=0.0
+--- Copilot: reflection C(x)=1-x and R_a(x)=exp(a)-x and translation T_{a,b}(x)=x+exp(a)-exp(b) ---
+  R_a(x) numeric identity, x=-4.2: 6.21375270747 vs 6.21375270747
+  T_{a,b}(x) numeric identity, x=2.5: 4.24122091444 vs 4.24122091444

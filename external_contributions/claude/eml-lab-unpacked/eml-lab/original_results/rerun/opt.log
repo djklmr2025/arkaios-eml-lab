@@ -1,0 +1,11 @@
+--- sub/add/neg ---
+Sub original (Z-ln)                K=          31 | unique E-nodes=    12 (var-dependent      9) | exp/ln evals tree=        15 DAG=    12 | depth=7
+Sub with paper ln (K)              K=          19 | unique E-nodes=     9 (var-dependent      9) | exp/ln evals tree=         9 DAG=     9 | depth=6
+Sub exhaustive real-only           K=          19 | unique E-nodes=     9 (var-dependent      9) | exp/ln evals tree=         9 DAG=     9 | depth=6
+Add via Sub1,N1                    K=          91 | unique E-nodes=    21 (var-dependent     17) | exp/ln evals tree=        45 DAG=    21 | depth=13
+Add exhaustive real-only           K=          19 | unique E-nodes=     9 (var-dependent      9) | exp/ln evals tree=         9 DAG=     9 | depth=8
+--- products ---
+M original (Z-ln, Mpos full)       K=      14,471 | unique E-nodes=   107 (var-dependent    103) | exp/ln evals tree=     7,235 DAG=   107 | depth=37
+M: paper ln + Sub1/S1              K=       7,547 | unique E-nodes=   107 (var-dependent    103) | exp/ln evals tree=     3,773 DAG=   107 | depth=35
+M: +exhaustive Sub/Add             K=         967 | unique E-nodes=    71 (var-dependent     71) | exp/ln evals tree=       483 DAG=    71 | depth=27
+M: +exhaustive +ln(P(t))=t shortcut K=         631 | unique E-nodes=    59 (var-dependent     59) | exp/ln evals tree=       315 DAG=    59 | depth=24

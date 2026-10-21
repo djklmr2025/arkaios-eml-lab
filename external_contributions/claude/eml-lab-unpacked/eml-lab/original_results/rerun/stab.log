@@ -1,0 +1,22 @@
+M plain  float64: (1230, 4225)
+M stable float64: (1615, 4225)
+M stable tol 1e-09: (1512, 4225)
+M stable tol 1e-12: (1337, 4225)
+M(1,1) plain=-inf  stable=1.000000000001819  true=1
+M(2,2) plain=nan  stable=-31.96875  true=4
+M(3,3) plain=nan  stable=0.0  true=9
+M(5,5) plain=nan  stable=nan  true=25
+M(-8,-8) plain=64.00000000000004  stable=64.00000000000004  true=64
+M(-6,2) plain=-inf  stable=0.0  true=-12
+M(3,-3) plain=inf  stable=53.10724956445939  true=-9
+M(7,-7) plain=0.0  stable=nan  true=-49
+M(8,8) plain=0.0  stable=nan  true=64
+M(10,10) plain=0.0  stable=nan  true=100
+V plain ok: 8 of 56  stable ok: 21
+V(1,1) stable=1.000000000001819 true=1.0
+V(1,2) stable=nan true=0.5
+V(-1,2) stable=nan true=-0.5
+V(2,-1) stable=-2.0000000001454055 true=-2.0
+V(0.5,0.5) stable=0.0 true=1.0
+V(3,0.5) stable=0.0 true=6.0
+unique E, ln calls after rewrite, ln eliminated: (59, 33, 26) (180, 101, 79)

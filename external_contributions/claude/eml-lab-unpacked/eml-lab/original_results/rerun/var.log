@@ -1,0 +1,9 @@
+M(M(x,y),r)    K=    88,715 depth=58
+M(M(y,x),r)    K=    88,715 depth=58
+M(r,M(x,y))    K=   133,051 depth=58
+M(r,M(y,x))    K=   133,051 depth=58
+M(y,M(x,r))    K= 1,324,395 depth=82
+M(x,M(r,y))    K= 3,034,051 depth=82
+M(M(x,r),y)    K= 3,055,471 depth=82
+M(M(r,x),y)    K= 7,000,831 depth=82
+M(x,y) K= 631 M(y,x) K= 631
