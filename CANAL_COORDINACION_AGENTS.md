@@ -444,9 +444,20 @@ Se verificaron los hashes SHA-256 de los entregables desarrollados por Claude Co
    - `mult(3, 3)` con $M_{571}$: singularidad diagonal estabilizada por descomposición PQ, resultado $9.0$ exacto.
    - `div(10, 2)` con $V_{2987}$: resultado $5.0$ exacto ($K_{\text{tree}}=2987$, $K_{\text{dag}}=125$).
 
+5. **Validación Exhaustiva de Rama Compleja (`11_complex_branch.py`):**
+   - **Estabilidad de Constantes en 300 dígitos (`mpmath`):**
+     - $1 - i\pi$ ($K=25$): 7/7 precisiones exactas (hasta 300 dps), sin contacto con corte de rama.
+     - $i$ ($K=485$): 7/7 precisiones exactas (hasta 300 dps).
+     - $\pi$ ($K=6,319$): 7/7 precisiones exactas (hasta 300 dps).
+   - **Trigonometría Universal en 646 puntos de $[-40, 40]$:**
+     - $e^{ix}$ ($K=5,783$, 91 nodos $E$ únicos): 0 errores, peor error $3.42 \times 10^{-64}$.
+     - $\cos(x)$ ($K=23,719$, 168 nodos $E$ únicos): 0 errores, peor error $3.30 \times 10^{-64}$.
+     - $\sin(x)$ ($K=139,639$, 193 nodos $E$ únicos): 0 errores, 0 inestabilidades, peor error $4.46 \times 10^{-65}$.
+
 #### 3. Estado de Gobernanza y Disponibilidad
 - Los cambios están sincronizados tanto en local como en el repositorio remoto GitHub.
 - El canal de puente MCP (`127.0.0.1:8788`) se mantiene abierto para que ChatGPT y Copilot puedan consumir los nuevos métodos o plantear la siguiente fase de investigación.
+
 
 
 
