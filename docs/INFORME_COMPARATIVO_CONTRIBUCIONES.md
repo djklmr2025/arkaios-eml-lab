@@ -80,12 +80,39 @@ Claude aportó correcciones rigurosas en [`AUDIT_EXTERNAL_CLAIMS.md`](file:///c:
 
 ---
 
-## 5. Cuadro Comparativo General
-
-| Aspecto | Contribución de ChatGPT | Contribución de Claude |
-| :--- | :--- | :--- |
-| **Enfoque Principal** | Simplificación preliminar y microbenchmark demostrativo | Reducción combinatoria exhaustiva, DAGs globales y auditoría de precisión |
-| **Expresiones Analizadas** | Identidad $\ln(\exp(x)) = x$ | Suma ($K=19$), Resta ($K=19$), Producto ($K=631$), División ($K=88,715$) |
-| **Alcance Numérico** | Float64 estándar en Python | Float64 + Precisión arbitraria hasta 418 dps (`mpmath`) |
 | **Mapeo DAG** | Conceptual | Grafos JSON y RPN formalizados con conteo exacto de nodos únicos |
 | **Auditoría de Reclamaciones** | Orientada a límites y directivas de diseño | Auditoría crítica matemática línea por línea |
+
+---
+
+## 6. Avance Etapa B (v2): Multiplicación $K=571$ y División $K=2,987$
+
+El nuevo paquete entregado por Claude (`proyecto claude.zip` / `eml-lab_v2.zip`, resguardado como `Claude_proyecto_v2.zip`) introduce un hito mayor de optimización sobre la aritmética puramente real:
+
+### 1. Resguardo y Hashes de Nuevos Materiales
+* `Claude_datos_memoria_sesion_alterna.zip` (Memoria de sesión alterna):
+  * SHA-256: `F940D47467FA68C3D3FA741F5F0628C14EEC1B88D5DA84E403060D7FB93849CF`
+* `Claude_proyecto_v2.zip` (Proyecto EML Etapa B):
+  * SHA-256: `7E0DE7904C893A2814286D71DF1218169F32768B56FD18ECBC06C97D000F111A`
+
+### 2. Multiplicación Optimizada: $M_{571}$ ($K=571$)
+* **Complejidad:** Reducción de $K=631$ a **$K=571$** (60 símbolos reducidos, -9.5%).
+* **Estructura:** 24 de profundidad, 59 nodos $E$ únicos en DAG (48 hojas $x$, 32 hojas $y$).
+* **Construcción:** Optimización combinatoria de las $2^6$ permutaciones de orden de argumentos dentro de $Add_{19}(a, b)$, donde $a$ se replica 3 veces y $b$ una vez.
+* **Precisión:** Probada en 81 pares en $[-3, 3]^2$, 0 fallos de dominio, error relativo máximo $8.52 \times 10^{-120}$ con $\le 540$ dígitos.
+
+### 3. Reducción Masiva de División Global: $V_{2987}$ ($K=2,987$)
+* **Complejidad:** Reducción histórica de $K=88,715$ a **$K=2,987$** (**-96.6% de reducción**).
+* **Estructura:** Profundidad 36, **125 nodos $E$ únicos en DAG** (frente a 180 en $V_{\text{opt}}$).
+* **Construcción Matemática:** En lugar de anidar multiplicaciones completas $M(M(x, y), 1/y^2)$, el factor $1/y^2$ se pliega directamente en los exponentes:
+  $$\frac{x}{y} = \frac{x \cdot y}{y^2} = \frac{A - B}{q} = \frac{1+A}{q} - \frac{1+B}{q}, \quad q = M_{571}(y, y) = y^2$$
+  $$\frac{T}{q} = \exp(\ln T - \ln q) = \exp(\text{eml}(\ln(\ln T), q)) \quad \text{válido para } T > 1, q > 0$$
+  $$V_{2987} = \text{Sub}_{19}\left(\text{divq}(1+A, q), \text{divq}(1+B, q)\right)$$
+* **Ventaja Numérica:**
+  * En el punto crítico $(3, 3)$, $V_{\text{opt}}$ requería 7,740 dígitos y 31 segundos de cómputo.
+  * $V_{2987}$ evalúa en $(3, 3)$ con tan solo **540 dígitos en 0.1 segundos**.
+  * En puntos donde $V_{\text{opt}}$ colapsaba o no terminaba (e.g. $(0.5, 0.25)$, $(1.5, 0.1)$, $(4, 4)$), $V_{2987}$ converge con precisión de hasta 3,900 dígitos sin fallo.
+
+### 4. Resultado Negativo Documentado: $V_{2959}$
+* Claude documentó con transparencia científica que una descomposición teórica alternativa con $K=2,959$ es numéricamente inviable (patológica), requiriendo argumentos exponenciales de $\sim 10^{4.6 \times 10^9}$. Por ello, se descartó formalmente bajo el principio: **"Más corta no equivale a evaluable"**.
+

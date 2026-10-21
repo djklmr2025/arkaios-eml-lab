@@ -1,0 +1,22 @@
+{
+ "M571": {
+  "K": 571,
+  "leaves": 286,
+  "depth": 24,
+  "internal": 285,
+  "unique_E": 59,
+  "x_leaves": 48,
+  "y_leaves": 32,
+  "sha256_rpn": "05be458b848aba40d123fc3e7781a08d29e23d6bb72fd79af71be4719e329caa"
+ },
+ "V2987": {
+  "K": 2987,
+  "leaves": 1494,
+  "depth": 36,
+  "internal": 1493,
+  "unique_E": 125,
+  "x_leaves": 44,
+  "y_leaves": 356,
+  "sha256_rpn": "e6ae49f1ea2a547a5fa476e90cbc64f4a9f916471d65d68f2400ac55846308c5"
+ }
+}

@@ -1,0 +1,14 @@
+name        K (symbols)      leaves depth  tree E-nodes unique E (DAG)        #x        #y
+Sub_orig             31          16     7            15             12         1         3
+Add_orig            139          70    13            69             21         1         9
+M_orig           14,471       7,236    37         7,235            107        76       468
+V_orig       21,478,743  10,739,372    82    10,739,371            284     5,776   799,344
+Sub_pl               19          10     6             9              9         1         3
+Add_pl               91          46    13            45             21         1         9
+M_pl              7,547       3,774    35         3,773            107        76       468
+Sub19                19          10     6             9              9         1         3
+Add19                19          10     8             9              9         3         1
+M_opt               631         316    24           315             59        60        26
+V_opt            88,715      44,358    58        44,357            180     3,600     8,268
+
+Note: K = 2*leaves-1 is the RPN length used by Odrzywolek's Table 4. 'tree E-nodes' = exp calls = ln calls of a pure tree run.

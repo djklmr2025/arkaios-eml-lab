@@ -1,0 +1,18 @@
+Z nodes 7 leaves 4 depth 3
+P nodes 3 leaves 2 depth 1
+L nodes 19 leaves 10 depth 6
+Sub nodes 31 leaves 16 depth 7
+Neg nodes 37 leaves 19 depth 7
+Add nodes 139 leaves 70 depth 13
+max error 80-digit: 4.9784e-58
+Z= 0.0
+---- RPN of Sub ----
+111E1EE111E1EEyy1EEE1EEyx1EE1EE 31
+Z RPN: 111E1EE 7
+L(x) RPN: 111E1EE111E1EExE1EE 19
+paper ln RPN: 11xE1EE (7)
+Mul nodes 321 Div nodes 105
+max err Mul (incl negatives, complex principal log): 2.3896e-58
+max err Div: 4.2694e-59
+sample (-2)*(-3) -> (6.0 - 1.53812214797094e-60j)
+0.0

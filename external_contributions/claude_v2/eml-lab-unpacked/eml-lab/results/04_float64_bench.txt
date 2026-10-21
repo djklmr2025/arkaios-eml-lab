@@ -1,0 +1,37 @@
+== correctness of float64 results (tolerance 1e-6 relative to max(1,|true|)), grid [-8,8]^2 step 0.25 (4225 pts) ==
+Sub19  dag:  3835   dag_stable:  4225   (of 4225)
+Add19  dag:  3835   dag_stable:  4225   (of 4225)
+M_opt  dag:  1230   dag_stable:  1615   (of 4225)
+V_opt  dag:    96   dag_stable:   404   (of 4160)
+M_opt dag_stable at tol 1e-09: 1512
+M_opt dag_stable at tol 1e-12: 1337
+
+== failure catalogue for M_opt (also written to results/failures_M.csv) ==
+M(1,1): true=1  plain=-inf  stable=1.000000000001819  adaptive_mp=1.0 (dps=120)
+M(2,2): true=4  plain=nan  stable=-31.96875  adaptive_mp=4.0 (dps=144)
+M(3,3): true=9  plain=nan  stable=0.0  adaptive_mp=9.0 (dps=408)
+M(5,5): true=25  plain=nan  stable=nan  adaptive_mp=skipped: needs > 3000 digits (observed for (5,5); cost grows double-exponentially)
+M(-8,-8): true=64  plain=64.00000000000004  stable=64.00000000000004  adaptive_mp=skipped: needs > 3000 digits (observed for (5,5); cost grows double-exponentially)
+M(-6,2): true=-12  plain=-inf  stable=0.0  adaptive_mp=skipped: needs > 3000 digits (observed for (5,5); cost grows double-exponentially)
+M(3,-3): true=-9  plain=inf  stable=53.10724956445939  adaptive_mp=-9.0 (dps=136)
+M(7,-7): true=-49  plain=0.0  stable=nan  adaptive_mp=skipped: needs > 3000 digits (observed for (5,5); cost grows double-exponentially)
+M(8,8): true=64  plain=0.0  stable=nan  adaptive_mp=skipped: needs > 3000 digits (observed for (5,5); cost grows double-exponentially)
+M(10,10): true=100  plain=0.0  stable=nan  adaptive_mp=skipped: needs > 3000 digits (observed for (5,5); cost grows double-exponentially)
+M(0.5,0.5): true=0.25  plain=0.2499999999999929  stable=0.2499999999999929  adaptive_mp=0.25 (dps=120)
+M(1.5,1.5): true=2.25  plain=nan  stable=2.24981689453125  adaptive_mp=2.25 (dps=121)
+M(-3,-3): true=9  plain=8.999999999999996  stable=8.999999999999996  adaptive_mp=9.0 (dps=120)
+M(2,3): true=6  plain=nan  stable=0.0  adaptive_mp=6.0 (dps=211)
+
+== M(3,3) case study: result vs working precision (the double-exponential cancellation) ==
+dps=  50  M(3,3)=1.33638235505e-51  largest exp-argument ~ 10^175.2
+dps= 100  M(3,3)=           0.0  largest exp-argument ~ 10^175.2
+dps= 200  M(3,3)=           0.0  largest exp-argument ~ 10^298.1
+dps= 250  M(3,3)=           0.0  largest exp-argument ~ 10^298.1
+dps= 290  M(3,3)=           0.0  largest exp-argument ~ 10^298.1
+dps= 300  M(3,3)=   9.552734375  largest exp-argument ~ 10^298.1
+dps= 320  M(3,3)=           9.0  largest exp-argument ~ 10^298.1
+dps= 360  M(3,3)=           9.0  largest exp-argument ~ 10^298.1
+dps= 420  M(3,3)=           9.0  largest exp-argument ~ 10^298.1
+dps= 600  M(3,3)=           9.0  largest exp-argument ~ 10^298.1
+Rule observed: digits needed ~ log10(largest exp argument) + target. At (3,3) that is ~10^298 -> ~330+ digits.
+float64 has 16 digits and cannot even represent exp(10^298); the stable rewrite removes overflow but not cancellation.

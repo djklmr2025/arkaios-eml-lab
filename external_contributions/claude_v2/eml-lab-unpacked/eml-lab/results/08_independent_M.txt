@@ -1,0 +1,4 @@
+(3,3)  value=9.0  abs_err=3.15e-151  OK  [0.0s]
+(-2,0.5)  value=-1.0  abs_err=7.3e-450  OK  [0.0s]
+(0,1)  value=2.9194864280542268e-449  abs_err=2.92e-449  OK  [0.0s]
+(1,1)  value=1.0  abs_err=3.74e-447  OK  [0.0s]
