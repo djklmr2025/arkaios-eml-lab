@@ -1,0 +1,25 @@
+== 1. Real blocks fed with COMPLEX inputs (principal Log): the branch cut breaks them ==
+  Sub19 x-y: correct on 1465/2000 random points of [-3,3]+[-3,3]i
+  Add19 x+y: correct on 1417/2000 random points of [-3,3]+[-3,3]i
+  Neg  -x : correct on 1577/2000 random points of [-3,3]+[-3,3]i
+  L    ln x: correct on 2000/2000 random points of [-3,3]+[-3,3]i
+
+== 2. Constants: value and stability at 40, 57, 73, 101, 150, 233, 300 digits ==
+  i*pi (UNSTABLE route)  K=   91  correct=4/7  touches_branch_cut=True
+  1 - i*pi               K=   25  correct=7/7  touches_branch_cut=False
+  i*pi/2                 K=  483  correct=7/7  touches_branch_cut=False
+  -i*pi/2                K=  435  correct=7/7  touches_branch_cut=False
+  i                      K=  485  correct=7/7  touches_branch_cut=False
+  i*pi                   K= 1947  correct=7/7  touches_branch_cut=False
+  pi (real!)             K= 6319  correct=7/7  touches_branch_cut=True
+  pi/2                   K= 1927  correct=7/7  touches_branch_cut=True
+
+== 3. Functions of a real x, 646 points in [-40,40] (incl. 0, +-1e-12, +-pi, pi/2) ==
+  e^{ix}      K= 5,783  unique E=  91  depth= 46  wrong=0  on_cut=0  unstable=0  worst=3.42e-64
+  e^{-ix}     K= 5,495  unique E=  91  depth= 46  wrong=0  on_cut=0  unstable=0  worst=3.42e-64
+  cos x (v1)  K=22,957  unique E= 134  depth= 62  wrong=0  on_cut=316  unstable=0  worst=3.3e-64
+  sin x (v1)  K=67,425  unique E= 150  depth= 72  wrong=1  on_cut=321  unstable=0  worst=2.49e-64
+  cos x       K=23,719  unique E= 168  depth= 70  wrong=0  on_cut=0  unstable=0  worst=3.3e-64
+  sin x       K=139,639  unique E= 193  depth= 85  wrong=0  on_cut=646  unstable=0  worst=4.46e-65
+  on_cut = a Log argument lies on the negative real axis up to rounding; harmless when that Log only enters exp(Log u + c)
+  (the 2*pi*i ambiguity cancels) - 'unstable' (result changes with +37 digits) is the test that matters.

@@ -1,0 +1,13 @@
+n=2 leaves (K=3): distinct new functions=3  total=6  [0s]
+n=3 leaves (K=5): distinct new functions=12  total=18  [0s]
+n=4 leaves (K=7): distinct new functions=41  total=59  [0s]
+n=5 leaves (K=9): distinct new functions=139  total=198  [0s]
+n=6 leaves (K=11): distinct new functions=483  total=681  [0s]
+n=7 leaves (K=13): distinct new functions=1,673  total=2,354  [0s]
+n=8 leaves (K=15): distinct new functions=5,820  total=8,174  [0s]
+n=9 leaves (K=17): distinct new functions=20,653  total=28,827  [0s]
+n=10 leaves (K=19): distinct new functions=74,514  total=103,341  [0s]
+n=11 leaves (K=21): distinct new functions=271,958  total=375,299  [0s]
+n=12 leaves (K=23): distinct new functions=1,000,843  total=1,376,142  [1s]
+n=13 leaves (K=25): distinct new functions=3,721,581  total=5,097,723  [4s]
+saved

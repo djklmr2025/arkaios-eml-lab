@@ -1,0 +1,17 @@
+M (new, K631 class)                K=         631 | unique E-nodes=    59 (var-dependent     59) | exp/ln evals tree=       315 DAG=    59 | depth=24
+V = M(M(x,y),1/y^2)                K=      88,715 | unique E-nodes=   180 (var-dependent    176) | exp/ln evals tree=    44,357 DAG=   180 | depth=58
+V2 = M(x, M(y,1/y^2))              K=   1,324,395 | unique E-nodes=   176 (var-dependent    172) | exp/ln evals tree=   662,197 DAG=   176 | depth=82
+M new float64 ok: 1230 of 4225 ; x range -8.0 8.0 y range -8.0 1.25
+M(1,1)=-inf true=1
+M(0.5,0.5)=0.2499999999999929 true=0.25
+M(2,3)=nan true=6
+M(-3,-3)=8.999999999999996 true=9
+M(-6,2)=-inf true=-12
+M(3,-3)=inf true=-9
+M(1.5,1.5)=nan true=2.25
+M(2,2)=nan true=4
+V(1,1)=nan  V2=nan true=1.0
+V(1,2)=nan  V2=nan true=0.5
+V(-1,2)=nan  V2=nan true=-0.5
+V(2,-1)=nan  V2=inf true=-2.0
+V(0.5,0.5)=nan  V2=nan true=1.0

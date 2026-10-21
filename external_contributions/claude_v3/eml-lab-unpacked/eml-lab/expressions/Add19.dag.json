@@ -1,0 +1,1 @@
+{"root": 11, "nodes": [["1", null, null], ["x", null, null], ["y", null, null], ["E", 2, 0], ["E", 1, 0], ["E", 1, 4], ["E", 0, 5], ["E", 6, 0], ["E", 0, 7], ["E", 8, 3], ["E", 9, 0], ["E", 1, 10]], "meaning": "node ['E',a,b] = exp(a) - ln(b); leaves '1','x','y'"}

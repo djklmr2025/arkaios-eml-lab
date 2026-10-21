@@ -1,0 +1,13 @@
+== Sub / Add, 196 pairs in [-30,30]^2, fixed 400 digits ==
+Sub_orig  pairs=196  domain_failures=0  worst_abs_err= 5.63e-388  max_dps_used=  400  [0.4s]
+Add_orig  pairs=196  domain_failures=0  worst_abs_err= 5.63e-388  max_dps_used=  400  [0.6s]
+Sub_pl    pairs=196  domain_failures=0  worst_abs_err= 5.63e-388  max_dps_used=  400  [0.2s]
+Sub19     pairs=196  domain_failures=0  worst_abs_err= 5.63e-388  max_dps_used=  400  [0.2s]
+Add19     pairs=196  domain_failures=0  worst_abs_err= 5.63e-388  max_dps_used=  400  [0.3s]
+== Products, 81 pairs in [-3,3]^2, adaptive precision (target 30 digits) ==
+M_orig    pairs= 81  domain_failures=0  worst_abs_err= 3.87e-119  max_dps_used=  418  [0.8s]
+M_pl      pairs= 81  domain_failures=0  worst_abs_err= 3.87e-119  max_dps_used=  418  [0.9s]
+M_opt     pairs= 81  domain_failures=0  worst_abs_err= 3.87e-119  max_dps_used=  418  [0.5s]
+== Division V_opt (K=88,715), x in [-2, -1, -0.5, 0, 0.5, 1, 2], y in [-2, -1, -0.5, 0.5, 1, 2], adaptive precision (priority A) ==
+V_opt     pairs= 42  domain_failures=0  worst_abs_err= 2.48e-119  max_dps_used=  221  [0.9s]
+ALL PASSED

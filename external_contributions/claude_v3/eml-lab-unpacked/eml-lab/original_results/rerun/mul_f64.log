@@ -1,0 +1,28 @@
+P 3 Q 5 Mpos(x,y) 321
+Q(x)       K(total symbols)=         5  leaves=        3  depth=  2  #x=     2  #y=     0  distinct DAG nodes below=0
+Sub        K(total symbols)=        31  leaves=       16  depth=  7  #x=     1  #y=     3  distinct DAG nodes below=0
+S          K(total symbols)=       139  leaves=       70  depth= 13  #x=     1  #y=     9  distinct DAG nodes below=0
+Mpos       K(total symbols)=       321  leaves=      161  depth= 19  #x=     1  #y=     9  distinct DAG nodes below=0
+M          K(total symbols)=    14,471  leaves=    7,236  depth= 37  #x=    76  #y=   468  distinct DAG nodes below=0
+V (propuesta) K(total symbols)=21,478,743  leaves=10,739,372  depth= 82  #x= 5,776  #y=799,344  distinct DAG nodes below=0
+V (L(1)->Z) K(total symbols)=21,473,127  leaves=10,736,564  depth= 82  #x= 5,776  #y=799,344  distinct DAG nodes below=0
+M(0,0) -8.881784197001252e-16 M(1,1) -inf M(2,3) nan M(-1,-1) 0.9999999999999983 M(-2,3) nan M(0.5,0.5) 0.25
+M float64 correct (rel/abs 1e-6): 429 of 4225
+x range ok: -6.5 1.25  y range ok: -6.5 1.25
+max x+y among ok points: 1.5
+M(0.5,0.5)=0.25 true=0.25
+M(0.75,0.75)=0.5625000000001137 true=0.5625
+M(1,1)=-inf true=1
+M(1,0)=0.0 true=0
+M(0,3)=nan true=0
+M(-3,-3)=inf true=9
+M(-6,-6)=inf true=36
+M(-8,-8)=inf true=64
+M(-6,2)=nan true=-12
+M(-6,6)=nan true=-36
+M(3,-3)=inf true=-9
+V(1,1)=nan true=1.0
+V(1,2)=nan true=0.5
+V(-1,2)=nan true=-0.5
+V(2,-1)=nan true=-2.0
+V(0.5,0.5)=nan true=1.0

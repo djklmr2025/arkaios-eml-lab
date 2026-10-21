@@ -1,0 +1,14 @@
+name                 K depth uniqueE    #x    #y
+M_opt (prev)       631    24      59    60    26
+M571               571    24      59    48    32
+V_opt (prev)    88,715    58     180  3600  8268
+V2959 (FG)       2,959    32     117    32   368
+V2987            2,987    36     125    44   356
+exported: {'M571': '05be458b848aba40', 'V2987': 'e6ae49f1ea2a547a'}
+M571   pairs= 81 domain_failures=0 worst_rel_err=8.52e-120 max_dps=  540 [0.4s]
+V2987  pairs= 72 domain_failures=0 worst_rel_err=1.16e-119 max_dps=  540 [1.2s]
+V2987  pairs=  7 domain_failures=0 worst_rel_err=3.97e-120 max_dps= 3900 [12.1s]
+V2959(FG) at (1,2): needs 168 digits (max log10 exp-arg 49)
+V2959(FG) at (2,2): needs 7740 digits (max log10 exp-arg 5193)
+y=0 correctly rejected: DomainError
+ALL PASSED

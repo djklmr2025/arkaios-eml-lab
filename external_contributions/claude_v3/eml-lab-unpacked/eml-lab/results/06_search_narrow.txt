@@ -1,0 +1,15 @@
+== enumeration, sample points = narrow ==
+n= 2 leaves (K= 3): distinct new functions=         3  total=         6  [0s]
+n= 3 leaves (K= 5): distinct new functions=        12  total=        18  [0s]
+n= 4 leaves (K= 7): distinct new functions=        41  total=        59  [0s]
+n= 5 leaves (K= 9): distinct new functions=       141  total=       200  [0s]
+n= 6 leaves (K=11): distinct new functions=       513  total=       713  [0s]
+n= 7 leaves (K=13): distinct new functions=     1,850  total=     2,563  [0s]
+n= 8 leaves (K=15): distinct new functions=     6,748  total=     9,311  [0s]
+n= 9 leaves (K=17): distinct new functions=    24,970  total=    34,281  [0s]
+n=10 leaves (K=19): distinct new functions=    93,425  total=   127,706  [0s]
+
+target leaves   K  verification on 169-point grid in [-30,30]^2 (400 digits)      RPN / note
+x-y        10  19  GLOBAL OK (0 domain failures, err 5.6e-388)                    11yy1EEE1EEyx1EE1EE [exhaustive]
+x+y        10  19  NOT GLOBAL: 52 of 169 grid points leave the real domain        1111x1EEE1EEy1EE1EE [exhaustive]
+-x          9  17  NOT GLOBAL: 52 of 169 grid points leave the real domain        111x1EEE1EE11E1EE [exhaustive]
